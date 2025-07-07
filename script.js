@@ -6,6 +6,12 @@ tl.from(".line h1, .line h2", {
   delay: 0.5,
 });
 
+tl.from("#loader-bottom h5", {
+  y: 150,
+  duration: 0.6,
+  delay: 0.5,
+});
+
 tl.from("#line1-part1", {
   opacity: 0,
   onStart: function () {
