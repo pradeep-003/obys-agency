@@ -12,18 +12,29 @@ html,
 body {
   height: 100%;
   width: 100%;
+  cursor: none;
 }
 
-#main {
-  position: relative;
-  background-color: #030303;
+body {
+  overflow-x: hidden;
+}
+
+#cursor {
+  height: 2.5vw;
+  width: 2.5vw;
+  border-radius: 50%;
+  position: fixed;
+  border: 1.5px solid #fff;
+  z-index: 999;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
 }
 
 #loader {
   width: 100%;
   height: 100%;
   position: fixed;
-  z-index: 999;
+  z-index: 9999;
   background-color: #0b0b0b;
   padding: 16vh 10vw;
 }
@@ -109,7 +120,6 @@ body {
   /* background-color: red; */
   margin-top: 4vh;
   padding-left: 20vw;
-
   overflow: hidden;
 }
 
@@ -119,8 +129,230 @@ body {
   font-family: "Plain Light";
 }
 
+#main {
+  position: relative;
+  background-color: #030303;
+}
+
 #page1 {
   height: 100vh;
+  width: 100%;
+  background-color: #151515;
+}
+
+#page1 #nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.3vw 5.5vw;
+}
+
+#nav-part2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3vw;
+}
+
+#nav-part2 h4 {
+  font-size: 1vw;
+  font-weight: 500;
+  /* background-color: blue; */
+  padding: 2vw 0vw;
+}
+
+.hero {
+  /* background-color: red; */
+  width: 72%;
+  margin-left: 27%;
+  height: fit-content;
+  overflow: hidden;
+  position: relative;
+  z-index: 99999;
+}
+
+#hero3 {
+  display: flex;
+  align-items: top;
+  /* background-color: yellow; */
+  height: fit-content;
+  overflow: hidden;
+}
+
+#hero3 h2 {
+  font-size: 7.2vw;
+  text-transform: uppercase;
+  line-height: 7.5vw;
+  font-weight: 600;
+  border-bottom: 8px solid white;
+  margin-right: 9px;
+  transition: all ease 0.3;
+}
+#hero3 h3 {
+  font-size: 7.2vw;
+  text-transform: uppercase;
+  line-height: 7.2vw;
+  font-weight: 600;
+}
+
+/* This is a CSS BUG actually it's catching 1st child */
+.hero:nth-child(2) {
+  margin-top: 14vh;
+}
+
+.hero h1 {
+  font-size: 7.2vw;
+  text-transform: uppercase;
+  line-height: 7.5vw;
+  font-weight: 600;
+}
+
+#hero3 h2:hover {
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  font-weight: 100;
+  border-bottom: none;
+}
+
+#page2 {
+  height: 100vh;
+  width: 100%;
+  background-color: #151515;
+  padding-top: 17vh;
+  position: relative;
+}
+
+#video-container {
+  height: 66vh;
+  width: 72vw;
+  position: relative;
+  left: 27vw;
+}
+
+#video-container img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  top: 0;
+}
+
+#video-container video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#video-cursor {
+  background-color: #ffa63d;
+  height: 8vw;
+  width: 8vw;
+  border-radius: 50%;
+  position: absolute;
+  top: 7%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#video-cursor i {
+  font-size: 3vw;
+  color: #fff;
+}
+
+#page3 {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #6a6565;
+  position: relative;
+}
+
+#page4 {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #151515;
+  padding-top: 5vh;
+}
+
+#page4-content {
+  width: 71vw;
+  position: relative;
+  left: 28vw;
+  /* background-color: blue; */
+}
+
+#page4-content h1 {
+  text-transform: uppercase;
+  font-size: 7vw;
+  margin-bottom: 5vw;
+}
+
+#page4-content .underline {
+  height: 1px;
+  width: 100%;
+  background-color: #fff;
+}
+
+#page4-content > p {
+  margin-top: 3.5vw;
+  font-size: 2.3vw;
+  line-height: 2.6vw;
+  width: 52%;
+  margin-bottom: 3.5vw;
+  font-weight: 500;
+}
+
+#page4-flex {
+  display: flex;
+}
+
+#page4-flex img {
+  width: 46%;
+}
+
+#page4-flex p {
+  font-size: 1vw;
+  width: 26%;
+  font-weight: 500;
+  line-height: 1.4vw;
+  margin-left: 2vw;
+}
+
+#page4-blue-div {
+  background-color: #3f7df4;
+  width: 33vw;
+  padding: 4vw 3vw;
+  position: relative;
+  margin-top: -32vh;
+  margin-left: 23vw;
+  margin-bottom: 10vw;
+}
+
+.blue-div-elem {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  /* background-color: #ffa63d; */
+  padding: 2.3vw 0;
+  border-bottom: 2px solid white;
+}
+
+.blue-div-elem h4 {
+  font-size: 1.4vw;
+  font-weight: 500;
+}
+
+.blue-div-elem p {
+  width: 45%;
+  font-size: 1.1vw;
+  font-weight: 500;
+}
+
+#page5 {
+  min-height: 100vh;
   width: 100%;
   background-color: #151515;
 }
