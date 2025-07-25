@@ -4,17 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Obsy Agency</title>
+    <!-- Favicon -->
     <link rel="shortcut icon" href="./favicon-32x32.png" type="image/x-icon" />
+
+    <!-- SheryJS CSS -->
     <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+
+    <!-- Locomotive Scroll CSS -->
     <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.css"
     />
+
+    <!-- Remix Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    />
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="cursor"></div>
-    <!-- <div id="loader">
+    <div id="loader">
       <div class="line">
         <div id="line1-part1">
           <h5>00</h5>
@@ -35,9 +47,9 @@
           a few seconds
         </h5>
       </div>
-    </div> -->
-    <div id="main">
-      <div id="page1">
+    </div>
+    <div id="main" data-scroll-container>
+      <div id="page1" data-scroll data-scroll-speed="-1.2">
         <div id="nav">
           <svg class="brand__svg" width="71" height="27" viewBox="0 0 71 27">
             <path
@@ -87,7 +99,9 @@
             <h4>Contacts</h4>
           </div>
         </div>
+
         <div class="hero" id="hero1">
+          <!-- <h4>01</h4> -->
           <h1>We Design</h1>
         </div>
         <div class="hero" id="hero2">
@@ -102,7 +116,7 @@
           <h1>Experience</h1>
         </div>
       </div>
-      <div id="page2">
+      <div id="page2" data-scroll data-scroll-speed="-1.2">
         <div id="video-container">
           <div id="video-cursor">
             <i class="ri-play-fill"></i>
@@ -112,15 +126,14 @@
             alt=""
           />
           <video
-            autoplay
             loop
             muted
             src="https://obys.agency/wp-content/uploads/2024/12/Obys-Showreel-2024.mp4"
           ></video>
         </div>
       </div>
-      <div id="page3"></div>
-      <div id="page4">
+      <div id="page3" data-scroll></div>
+      <div id="page4" data-scroll>
         <div id="page4-content">
           <h1>about obys</h1>
           <div class="underline"></div>
@@ -169,19 +182,113 @@
               <p>Interaction, Graphic Design</p>
             </div>
           </div>
-          <div class="underline"></div>
+          <div class="underline2"></div>
         </div>
       </div>
 
-      <div id="page5"></div>
+      <div id="page5" data-scroll data-scroll-speed="0.1">
+        <h4>We work with</h4>
+        <div class="elem">
+          <div class="scroll-line">
+            <span class="word serif">Fashion</span><span class="dash">-</span>
+            <span class="word">Technology</span><span class="dash">-</span>
+            <span class="word serif">Sport</span><span class="dash">-</span>
+
+            <span class="word serif">Fashion</span><span class="dash">-</span>
+            <span class="word">Technology</span><span class="dash">-</span>
+            <span class="word serif">Sport</span><span class="dash">-</span>
+          </div>
+        </div>
+
+        <div class="elem2">
+          <div class="scroll-line">
+            <span class="word serif">Architecture</span
+            ><span class="dash">-</span> <span class="word">Beauty</span
+            ><span class="dash">-</span>
+            <span class="word serif">Real Estate</span
+            ><span class="dash">-</span>
+
+            <span class="word serif">Architecture</span
+            ><span class="dash">-</span> <span class="word">Beauty</span
+            ><span class="dash">-</span>
+            <span class="word serif">Real Estate</span
+            ><span class="dash">-</span>
+          </div>
+        </div>
+
+        <div class="elem">
+          <div class="scroll-line">
+            <span class="word serif">Parteners</span
+            ><span class="dash">-</span> <span class="word">Travel</span
+            ><span class="dash">-</span> <span class="word serif">Science</span
+            ><span class="dash">-</span>
+
+            <span class="word serif">Parteners</span
+            ><span class="dash">-</span> <span class="word">Travel</span
+            ><span class="dash">-</span> <span class="word serif">Science</span
+            ><span class="dash">-</span>
+          </div>
+        </div>
+
+        <div class="elem2">
+          <div class="scroll-line">
+            <span class="word serif">Hotels</span><span class="dash">-</span>
+            <span class="word">Music</span><span class="dash">-</span>
+            <span class="word serif">Automotive</span
+            ><span class="dash">-</span>
+
+            <span class="word serif">Hotels</span><span class="dash">-</span>
+            <span class="word">Music</span><span class="dash">-</span>
+            <span class="word serif">Automotive</span
+            ><span class="dash">-</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="page6" data-scroll>
+        <div id="footer">
+          <h1>Let's create</h1>
+          <div class="underline"></div>
+          <div id="footer-div">
+            <div class="box">
+              <h6>Socials</h6>
+              <h5>Dribbble</h5>
+              <h5>Behance</h5>
+              <h5>Instagram</h5>
+              <h5>Facebook</h5>
+              <h5>Twitter</h5>
+              <h5>YouTube</h5>
+            </div>
+            <div class="box">
+              <h6>Address</h6>
+              <h5>Originally from Kharkiv,</h5>
+              <h5>working globally</h5>
+            </div>
+            <div class="box">
+              <h6>Say Hi!</h6>
+              <h5><a href="mailto:info@obys.agency">info@obys.agency</a></h5>
+            </div>
+          </div>
+          <div class="underline"></div>
+          <h3>Obys Agency © 2025</h3>
+        </div>
+      </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- Locomotive Scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+
+    <!-- GSAP and ScrollTrigger (Latest) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+
+    <!-- Shery.js -->
     <script
       type="text/javascript"
       src="https://unpkg.com/sheryjs/dist/Shery.js"
     ></script>
+
+    <!-- Your Custom Script -->
     <script src="script.js"></script>
   </body>
 </html>
